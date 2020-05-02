@@ -16,9 +16,11 @@ dokku plugin:install https://github.com/crisward/dokku-require.git require
 
 ## Usage
 
-In the root of your app, you need to add an app.json file [as specificed in this heroku spec](https://devcenter.heroku.com/articles/app-json-schema#schema-reference)
+In the root of your app, you need to add an `app.json` file [as specificed in this heroku spec](https://devcenter.heroku.com/articles/app-json-schema#schema-reference)
 
-With the addition of a dokku section (see below). 
+A different filename may be used via env var `DOKKU_REQUIRE_FILENAME`.
+
+With the addition of a dokku section (see below).
 
 ```json
 {
@@ -42,22 +44,22 @@ With the addition of a dokku section (see below).
 
 ## Plugins
 
-The `"dokku":{"plugins":[]}` array can contain a list of plugin names, which 
+The `"dokku":{"plugins":[]}` array can contain a list of plugin names, which
 by default will be created with the app name and linked to your app.
 This will only work with the official plugins which have `create` and `link` methods.
 ie.
 
-* [CouchDB (beta)](https://github.com/dokku/dokku-couchdb)                     
-* [Elasticsearch (beta)](https://github.com/dokku/dokku-elasticsearch-plugin)  
-* [MariaDB (beta)](https://github.com/dokku/dokku-mariadb-plugin)              
-* [Memcached (beta)](https://github.com/dokku/dokku-memcached-plugin)          
-* [Mongo (beta)](https://github.com/dokku/dokku-mongo-plugin)                  
-* [MySQL (beta)](https://github.com/dokku/dokku-mysql-plugin)                  
-* [Nats (beta)](https://github.com/dokku/dokku-nats)                           
-* [Postgres (beta)](https://github.com/dokku/dokku-postgres-plugin)            
-* [RabbitMQ (beta)](https://github.com/dokku/dokku-rabbitmq-plugin)            
-* [Redis (beta)](https://github.com/dokku/dokku-redis-plugin)                  
-* [RethinkDB (beta)](https://github.com/dokku/dokku-rethinkdb-plugin)   
+* [CouchDB (beta)](https://github.com/dokku/dokku-couchdb)
+* [Elasticsearch (beta)](https://github.com/dokku/dokku-elasticsearch-plugin)
+* [MariaDB (beta)](https://github.com/dokku/dokku-mariadb-plugin)
+* [Memcached (beta)](https://github.com/dokku/dokku-memcached-plugin)
+* [Mongo (beta)](https://github.com/dokku/dokku-mongo-plugin)
+* [MySQL (beta)](https://github.com/dokku/dokku-mysql-plugin)
+* [Nats (beta)](https://github.com/dokku/dokku-nats)
+* [Postgres (beta)](https://github.com/dokku/dokku-postgres-plugin)
+* [RabbitMQ (beta)](https://github.com/dokku/dokku-rabbitmq-plugin)
+* [Redis (beta)](https://github.com/dokku/dokku-redis-plugin)
+* [RethinkDB (beta)](https://github.com/dokku/dokku-rethinkdb-plugin)
 
 If you need more control over the creation process or you'd like to use
 a non-official plugins the below syntax can be used. Each command in the
@@ -125,7 +127,7 @@ Then in your `app.json` you would set your development settings under that key.
 
 ## Apps Using this Plugin
 
-As this is very new, I've only created a single app using this. 
+As this is very new, I've only created a single app using this.
 
 * https://github.com/crisward/dokku-ghost - create a ghost blog in dokku
 
